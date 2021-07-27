@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	
+<title>Learning Support - Helping the Community.</title>
+<link rel="stylesheet" href="css/ocr.css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src='js/tesseract.min.js'></script>
+  
+</head>
+
+<body>
+<p>&nbsp;</p>
+<table width="70%" border="0" align="center">
+  <tbody>
+    <tr>
+      <td colspan="4" bgcolor="#484747">
+      <div class="title-text">&quot;You are braver than you believe, and stronger than you seem, and smarter than you think &quot;</div></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#FFFFFF"><div class="menu-text">
+        <h3><a href="index.html">LEARNING SUPPORT</a></h3>
+      </div></td>
+      <td colspan="3" align="right" bgcolor="#FFFFFF"><table width="80%" border="0">
+        <tbody>
+          <tr>
+            <td width="21%"><div class="menu-text"><a href="AboutUs.html"></a></div></td>
+            <td width="24%"><div class="menu-text"><a href="ContactUs.html"></a></div></td>
+            <td width="28%"><div class="menu-text"><a href="index.html">HOME</a></div></td>
+          </tr>
+        </tbody>
+      </table></td>
+    </tr>
+    <tbody>
+      <tr>
+        <td width="24%"><div class="menu-text"><a href="%10Mission.html">OUR MISSION</a></div></td>
+        <td width="28%"><div class="menu-text"><a href="%10Learning.html">LEARNING DISABILITIES</a></div></td>
+        <td width="24%"><div class="menu-text"><a href="Help.html">HOW CAN YOU HELP</a></div></td>
+        <td width="28%"><div class="menu-text"><a href="ContactUs.html">CONTACT US</a></div></td>
+      </tr>
+    </tbody>
+    <tr>
+      <td colspan="4">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="center"><table width="80%" border="0" cellpadding="20">
+        <tr>
+              <td class="operation-text-1"><a href="SpeechToText.html"> <img width = "80" src="images/Speechtotext.png"/> <br> SPEECH TO TEXT</a></td>
+		  <td class="operation-text-2 active"><img width = "100" src="images/picturetotext.png"/> <br> PICTURE TO TEXT</td>
+          </tr>
+      </table>        <div class="menu-text"></div>      </td>
+    </tr>
+    <tr>
+        <table width="100%" border="0">
+          <tbody>
+            <tr>
+              <td colspan="2">
+                <TABLE align="center">
+                  <br>
+                  <br>
+                  <H1> PICTURE TO TEXT </H1>
+                  <img width = "150" src="images/picturetotext.png"/>
+                  <br>
+                  <H2 class="howto"> HOW TO USE: </H2>
+                  <TR>
+                  <TD class="step-text"> <b>1.</b> Choose a language. <br> </TD>
+                  <TD><img width = "70" src="images/language.png"/></TD>
+                  <TR>
+                  <TD class="step-text"> <b>2.</b> Upload your picture <br> </TD>
+                  <TD><img width = "70" src="images/uploadpic.jpeg"/></TD>
+                  </TR>
+                  <TR>
+                    <TD class="step-text"> <b>3.</b> Wait patiently<br> </TD>
+                    <TD><img width = "90" src="images/wait.jpeg"/></TD>
+                    </TR>
+                  <TR>
+                  <TD class="step-text"> <b>4.</b> Click on the "Listen to note" button to hear the text <br></TD>
+                  <TD><img width = "70" src="images/listen.png"/></TD>
+                  </TR>
+                  </TR>
+                  <TR>
+                  </TR>
+                  </TABLE>
+              </td>
+            </tr>
+
+    <tr>
+      <td colspan="4">
+      <table width="100%" style="border: indigo;">
+      <tr height="44" bgcolor="lightgrey">
+        <td colspan="4"> <h2><a href="#"> 
+          <strong>Language</strong></a></h2>
+          <select id="langsel">
+            <option value="eng" selected>English</option>
+            <option value="tha"> Thai</option>
+            <br>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <tr height="10" bgcolor="white">
+        <td colspan="1"> 
+        </td>
+      </tr>
+      <tr>
+          <td colspan="4">
+              <input width="200" type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple />
+              <label for="file-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                  <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> 
+                <span>Choose a file&hellip;</span>
+              </label>
+          </td>
+        </tr>
+      <tr>
+        <br>
+        <td colspan="2">
+          <div class="row">
+            <div class="col-12 col-md-5">
+            <div class="image-container">
+              <img width="300" height="auto" id="selected-image"  src="images/intro.jpg" class="col-12 p-0" /></div>
+            </div>
+          </div>
+        </td>
+        <td colspan="2">
+          <div id="log">
+              <span id="startPre">	
+              <!-- <a id="startLink" href="#">Click here to get the text</a> -->
+              </span>
+          </div>
+      </td>
+      </tr>
+      <tr>
+        <td colspan="2" bgcolor="white">&nbsp;</td>
+        <td colspan="2" bgcolor="white">
+        <div class="row" id="TtoS"> 
+          <h2><a href="#" class="menu-border"> 
+            <strong> <img width ="45" src="images/listen.png"/> <br> Listen to the text</strong></a></h2>
+        </div></td>
+      </tr>
+  
+      </table>
+
+    </td>
+    </tr>
+   </tbody>
+  </table>
+  <script src="js/tesseract-ocr.js"></script>
+  
+  </body>
+  </html>
+  
